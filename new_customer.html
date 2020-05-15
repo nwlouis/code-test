@@ -1,0 +1,22 @@
+{% extends "file_manage/base.html" %}
+{% block content %}
+{% load static %}
+    <form class="form-horizontal" method="POST">
+        {% csrf_token %}
+        <div class="jumbotron">
+            <div class="row spacer">
+                <div class="col-2">
+                    <div class="input-group">
+                        {{ customerForm.as_p }}       
+                    </div>
+                </div> 
+            </div> 
+            <div class="row spacer">
+                <div class="col-4 offset-2"></div>
+                <button type="submit" class="btn btn-block btn-primary">Add</button>
+            </div>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static "js/form.js" %}"></script>
+{% endblock %}
