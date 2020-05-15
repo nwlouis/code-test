@@ -1,0 +1,15 @@
+table,th,td{
+    border: 2px solid blue;
+}
+
+body {
+    background-color: whitesmoke;
+    background-image: url("images/texture.jpg");
+    background-size: cover;
+}
+.header {
+    padding: 60px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+  }
