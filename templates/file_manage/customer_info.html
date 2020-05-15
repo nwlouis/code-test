@@ -1,0 +1,21 @@
+{% extends "file_manage/base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <div class="container">
+            <table>
+                <thead>
+                    <th>customer name</th>
+                    <th>reference no.</th>
+                    <th>date of birth</th>
+                </thead>
+                <tr>
+                    <th>{{ customer.name }}</th>
+                    <td>{{ customer.ref }}</td>
+                    <td>{{ customer.date_of_birth }}</td>
+                </tr>
+            </table>
+            <p><a class="btn btn-primary" href="{% url 'edit_customer' pk=customer.pk %}">edit</a></p>
+            <p><a class="btn btn-primary" href="{% url 'remove_customer' pk=customer.pk %}">delete</a></p>
+        </div>
+    </div>
+{% endblock %}
